@@ -1,0 +1,26 @@
+function y=add(n)
+
+persistent X_o io
+dataType = 'double';
+
+if isempty(X_o)
+    
+    X_o=zeros(1,3);
+    io=1;
+end
+
+if length(X_o)<=3
+   
+    
+     X_o(io)=n;
+     io=io+1;
+    if length(X_o)~=add3
+        y=X_o;
+        disp('Vector Array Limit Is Exceeded')
+        return;
+    end
+     y=X_o;
+    
+     disp('keep Adding Numbers into String');
+end
+end
