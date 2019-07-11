@@ -7,7 +7,7 @@ function y=Clear_Varaiable(d_ref,d_new)
                 varName = {vars.name};
                 clear(varName{:});
                y=[];
-               return;
+               
          end
           
          

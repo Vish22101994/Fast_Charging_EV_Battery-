@@ -5,19 +5,17 @@ function [d_err Ve Ie]= Curve_Fitting(D ,V , I, d_ref)
 
         persistent d_1 d_2 Vo Io io d_new
         dataType = 'double';
-        
-        
       
         if d_ref ~= d_new
                  vars = whos;
                 vars = vars([vars.persistent]);
                 varName = {vars.name};
                 clear(varName{:});
-                d_err=[];
+                d_err=d_ref;
                 Ve=[];
                 Ie=[];
+                return;
                 
-               
         end
     
         if isempty(Vo)
@@ -30,14 +28,12 @@ function [d_err Ve Ie]= Curve_Fitting(D ,V , I, d_ref)
         end
         
         
-         Vo
+        Vo
         Io
+        d_ref 
         d_1
         d_2
-        
-        
-     
-       
+      
                  if length(Vo)==3
                         Ve=Vo;
                         Ie=Io;
@@ -80,10 +76,7 @@ function [d_err Ve Ie]= Curve_Fitting(D ,V , I, d_ref)
         
         Ve=Vo;
         Ie=Io;
-      
-          
-         
 end
             
         
-         toc     
+      

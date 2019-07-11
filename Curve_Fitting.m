@@ -3,20 +3,20 @@ function [d_err Ve Ie]= Curve_Fitting(D ,V , I, d_ref)
              
      
 
-        persistent d_1 d_2 Vo Io io d_new
+        persistent d_1 d_2 Vo Io io 
         dataType = 'double';
       
-        if d_ref ~= d_new
-                 vars = whos;
-                vars = vars([vars.persistent]);
-                varName = {vars.name};
-                clear(varName{:});
-                d_err=d_ref;
-                Ve=[];
-                Ie=[];
-                return;
-                
-        end
+%         if d_ref ~= d_new
+%                  vars = whos;
+%                 vars = vars([vars.persistent]);
+%                 varName = {vars.name};
+%                 clear(varName{:});
+%                 d_err=d_ref;
+% %                 Ve=[];
+% %                 Ie=[];
+%                 return;
+%                 
+%         end
     
         if isempty(Vo)
             Vo=0;
@@ -39,7 +39,7 @@ function [d_err Ve Ie]= Curve_Fitting(D ,V , I, d_ref)
                         Ie=Io;
                         d_err=d_ref;
                         disp('Vector Array Limit Is Exceeded')
-
+                        i0=0; 
                         return;    
                  end
 

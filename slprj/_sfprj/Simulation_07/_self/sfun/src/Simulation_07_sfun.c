@@ -1,8 +1,8 @@
 /* Include files */
 
-#include "Simulation_03_sfun.h"
-#include "Simulation_03_sfun_debug_macros.h"
-#include "c2_Simulation_03.h"
+#include "Simulation_07_sfun.h"
+#include "Simulation_07_sfun_debug_macros.h"
+#include "c2_Simulation_07.h"
 
 /* Type Definitions */
 
@@ -11,32 +11,32 @@
 /* Variable Declarations */
 
 /* Variable Definitions */
-uint32_T _Simulation_03MachineNumber_;
+uint32_T _Simulation_07MachineNumber_;
 
 /* Function Declarations */
 
 /* Function Definitions */
-void Simulation_03_initializer(void)
+void Simulation_07_initializer(void)
 {
 }
 
-void Simulation_03_terminator(void)
+void Simulation_07_terminator(void)
 {
 }
 
 /* SFunction Glue Code */
-unsigned int sf_Simulation_03_method_dispatcher(SimStruct *simstructPtr,
+unsigned int sf_Simulation_07_method_dispatcher(SimStruct *simstructPtr,
   unsigned int chartFileNumber, const char* specsCksum, int_T method, void *data)
 {
   if (chartFileNumber==2) {
-    c2_Simulation_03_method_dispatcher(simstructPtr, method, data);
+    c2_Simulation_07_method_dispatcher(simstructPtr, method, data);
     return 1;
   }
 
   return 0;
 }
 
-unsigned int sf_Simulation_03_process_check_sum_call( int nlhs, mxArray * plhs[],
+unsigned int sf_Simulation_07_process_check_sum_call( int nlhs, mxArray * plhs[],
   int nrhs, const mxArray * prhs[] )
 {
 
@@ -56,28 +56,28 @@ unsigned int sf_Simulation_03_process_check_sum_call( int nlhs, mxArray * plhs[]
     mxGetString(prhs[1], commandName,sizeof(commandName)/sizeof(char));
     commandName[(sizeof(commandName)/sizeof(char)-1)] = '\0';
     if (!strcmp(commandName,"machine")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3552044343U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(52365174U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1796799387U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3698315918U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(534199502U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1741926834U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(369497568U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3348866613U);
     } else if (!strcmp(commandName,"exportedFcn")) {
       ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(0U);
       ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0U);
     } else if (!strcmp(commandName,"makefile")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(12269575U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(3213687049U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(605132118U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3039876448U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(1667313428U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(1698642434U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1563255851U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(4092813074U);
     } else if (nrhs==3 && !strcmp(commandName,"chart")) {
       unsigned int chartFileNumber;
       chartFileNumber = (unsigned int)mxGetScalar(prhs[2]);
       switch (chartFileNumber) {
        case 2:
         {
-          extern void sf_c2_Simulation_03_get_check_sum(mxArray *plhs[]);
-          sf_c2_Simulation_03_get_check_sum(plhs);
+          extern void sf_c2_Simulation_07_get_check_sum(mxArray *plhs[]);
+          sf_c2_Simulation_07_get_check_sum(plhs);
           break;
         }
 
@@ -88,18 +88,18 @@ unsigned int sf_Simulation_03_process_check_sum_call( int nlhs, mxArray * plhs[]
         ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(0.0);
       }
     } else if (!strcmp(commandName,"target")) {
-      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(272314902U);
-      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2584324858U);
-      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(1204694939U);
-      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(833814741U);
+      ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(3031367619U);
+      ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(4001028638U);
+      ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3978939492U);
+      ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(838979348U);
     } else {
       return 0;
     }
   } else {
-    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(2295243924U);
-    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2424709438U);
-    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(4034180279U);
-    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(620652869U);
+    ((real_T *)mxGetPr((plhs[0])))[0] = (real_T)(667162611U);
+    ((real_T *)mxGetPr((plhs[0])))[1] = (real_T)(2698018238U);
+    ((real_T *)mxGetPr((plhs[0])))[2] = (real_T)(3049596533U);
+    ((real_T *)mxGetPr((plhs[0])))[3] = (real_T)(3275398829U);
   }
 
   return 1;
@@ -112,7 +112,7 @@ unsigned int sf_Simulation_03_process_check_sum_call( int nlhs, mxArray * plhs[]
 
 }
 
-unsigned int sf_Simulation_03_autoinheritance_info( int nlhs, mxArray * plhs[],
+unsigned int sf_Simulation_07_autoinheritance_info( int nlhs, mxArray * plhs[],
   int nrhs, const mxArray * prhs[] )
 {
 
@@ -137,9 +137,9 @@ unsigned int sf_Simulation_03_autoinheritance_info( int nlhs, mxArray * plhs[],
     switch (chartFileNumber) {
      case 2:
       {
-        if (strcmp(aiChksum, "wkj7joFSG3d4ZAScH5bGGH") == 0) {
-          extern mxArray *sf_c2_Simulation_03_get_autoinheritance_info(void);
-          plhs[0] = sf_c2_Simulation_03_get_autoinheritance_info();
+        if (strcmp(aiChksum, "ZYR61gGkEJO36yInQJfEgE") == 0) {
+          extern mxArray *sf_c2_Simulation_07_get_autoinheritance_info(void);
+          plhs[0] = sf_c2_Simulation_07_get_autoinheritance_info();
           break;
         }
 
@@ -162,7 +162,7 @@ unsigned int sf_Simulation_03_autoinheritance_info( int nlhs, mxArray * plhs[],
 
 }
 
-unsigned int sf_Simulation_03_get_eml_resolved_functions_info( int nlhs, mxArray
+unsigned int sf_Simulation_07_get_eml_resolved_functions_info( int nlhs, mxArray
   * plhs[], int nrhs, const mxArray * prhs[] )
 {
 
@@ -185,9 +185,9 @@ unsigned int sf_Simulation_03_get_eml_resolved_functions_info( int nlhs, mxArray
      case 2:
       {
         extern const mxArray
-          *sf_c2_Simulation_03_get_eml_resolved_functions_info(void);
+          *sf_c2_Simulation_07_get_eml_resolved_functions_info(void);
         mxArray *persistentMxArray = (mxArray *)
-          sf_c2_Simulation_03_get_eml_resolved_functions_info();
+          sf_c2_Simulation_07_get_eml_resolved_functions_info();
         plhs[0] = mxDuplicateArray(persistentMxArray);
         mxDestroyArray(persistentMxArray);
         break;
@@ -208,7 +208,7 @@ unsigned int sf_Simulation_03_get_eml_resolved_functions_info( int nlhs, mxArray
 
 }
 
-unsigned int sf_Simulation_03_third_party_uses_info( int nlhs, mxArray * plhs[],
+unsigned int sf_Simulation_07_third_party_uses_info( int nlhs, mxArray * plhs[],
   int nrhs, const mxArray * prhs[] )
 {
   char commandName[64];
@@ -230,9 +230,9 @@ unsigned int sf_Simulation_03_third_party_uses_info( int nlhs, mxArray * plhs[],
     switch (chartFileNumber) {
      case 2:
       {
-        if (strcmp(tpChksum, "QCkvR4TauHW8a8pZ7ElUbD") == 0) {
-          extern mxArray *sf_c2_Simulation_03_third_party_uses_info(void);
-          plhs[0] = sf_c2_Simulation_03_third_party_uses_info();
+        if (strcmp(tpChksum, "BnELcire0LmskEMwSCp2kC") == 0) {
+          extern mxArray *sf_c2_Simulation_07_third_party_uses_info(void);
+          plhs[0] = sf_c2_Simulation_07_third_party_uses_info();
           break;
         }
       }
@@ -245,7 +245,7 @@ unsigned int sf_Simulation_03_third_party_uses_info( int nlhs, mxArray * plhs[],
   return 1;
 }
 
-unsigned int sf_Simulation_03_updateBuildInfo_args_info( int nlhs, mxArray *
+unsigned int sf_Simulation_07_updateBuildInfo_args_info( int nlhs, mxArray *
   plhs[], int nrhs, const mxArray * prhs[] )
 {
   char commandName[64];
@@ -267,9 +267,9 @@ unsigned int sf_Simulation_03_updateBuildInfo_args_info( int nlhs, mxArray *
     switch (chartFileNumber) {
      case 2:
       {
-        if (strcmp(tpChksum, "QCkvR4TauHW8a8pZ7ElUbD") == 0) {
-          extern mxArray *sf_c2_Simulation_03_updateBuildInfo_args_info(void);
-          plhs[0] = sf_c2_Simulation_03_updateBuildInfo_args_info();
+        if (strcmp(tpChksum, "BnELcire0LmskEMwSCp2kC") == 0) {
+          extern mxArray *sf_c2_Simulation_07_updateBuildInfo_args_info(void);
+          plhs[0] = sf_c2_Simulation_07_updateBuildInfo_args_info();
           break;
         }
       }
@@ -282,33 +282,33 @@ unsigned int sf_Simulation_03_updateBuildInfo_args_info( int nlhs, mxArray *
   return 1;
 }
 
-void Simulation_03_debug_initialize(struct SfDebugInstanceStruct* debugInstance)
+void Simulation_07_debug_initialize(struct SfDebugInstanceStruct* debugInstance)
 {
-  _Simulation_03MachineNumber_ = sf_debug_initialize_machine(debugInstance,
-    "Simulation_03","sfun",0,1,0,0,0);
+  _Simulation_07MachineNumber_ = sf_debug_initialize_machine(debugInstance,
+    "Simulation_07","sfun",0,1,0,0,0);
   sf_debug_set_machine_event_thresholds(debugInstance,
-    _Simulation_03MachineNumber_,0,0);
+    _Simulation_07MachineNumber_,0,0);
   sf_debug_set_machine_data_thresholds(debugInstance,
-    _Simulation_03MachineNumber_,0);
+    _Simulation_07MachineNumber_,0);
 }
 
-void Simulation_03_register_exported_symbols(SimStruct* S)
+void Simulation_07_register_exported_symbols(SimStruct* S)
 {
 }
 
 static mxArray* sRtwOptimizationInfoStruct= NULL;
-mxArray* load_Simulation_03_optimization_info(void)
+mxArray* load_Simulation_07_optimization_info(void)
 {
   if (sRtwOptimizationInfoStruct==NULL) {
-    sRtwOptimizationInfoStruct = sf_load_rtw_optimization_info("Simulation_03",
-      "Simulation_03");
+    sRtwOptimizationInfoStruct = sf_load_rtw_optimization_info("Simulation_07",
+      "Simulation_07");
     mexMakeArrayPersistent(sRtwOptimizationInfoStruct);
   }
 
   return(sRtwOptimizationInfoStruct);
 }
 
-void unload_Simulation_03_optimization_info(void)
+void unload_Simulation_07_optimization_info(void)
 {
   if (sRtwOptimizationInfoStruct!=NULL) {
     mxDestroyArray(sRtwOptimizationInfoStruct);
